@@ -55,6 +55,7 @@ internal class Program
                     spacesCount -= columnsResults[listI][columnI].Length;
 
                     string spaces = new string(Enumerable.Repeat(' ', spacesCount).ToArray());
+                    spaces = listI == columnsResults.Count - 1 ? string.Empty : spaces;// if last column -> no spaces
 
                     Console.Write($"{columnsResults[listI][columnI]}{spaces}");
                 }
